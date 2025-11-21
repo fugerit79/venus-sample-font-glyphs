@@ -18,6 +18,9 @@
                <font embed-url="classpath://font/FreeSerif.otf" embedding-mode="full">
                    <font-triplet name="FreeSerif" style="normal" weight="normal"/>
                </font>
+               <font embed-url="classpath://font/TitilliumWeb-Regular.ttf" embedding-mode="full">
+                   <font-triplet name="TitilliumWeb" style="normal" weight="normal"/>
+               </font>
            </fonts>
 	   </renderer> 
 	</renderers>
