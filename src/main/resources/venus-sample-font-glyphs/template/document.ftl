@@ -30,12 +30,14 @@
         <info name="excel-table-id">data-table=print</info>
         <!-- property specific for csv -->
         <info name="csv-table-id">data-table</info>
+        <info name="default-font-name">FreeSerif</info>
         <footer-ext>
             <para align="right">${r"${currentPage}"} / ${r"${pageCount}"}</para>
         </footer-ext>
     </metadata>
     <body>
     <para>${docTitle!defaultTitle}</para>
+    <para>Sample glyph □ with free serif font</para>
     <table columns="3" colwidths="30;30;40"  width="100" id="data-table" padding="2">
         <row header="true">
             <cell align="center"><para>Name</para></cell>

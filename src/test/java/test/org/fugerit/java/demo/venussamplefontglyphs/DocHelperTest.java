@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
@@ -36,22 +38,22 @@ class DocHelperTest {
 
     @Test
     void testDocProcess() throws Exception {
-        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+        String chainId = "document";
+        // handler id
+        String handlerId = DocConfig.TYPE_PDF;
+        File outputFile = new File( String.format( "target/%s.%s", chainId, handlerId ) );
+        log.info( "delete {} : {}", outputFile, outputFile.delete() );
+        try ( FileOutputStream fos = new FileOutputStream( outputFile ) ) {
             // creates the doc helper
             DocHelper docHelper = new DocHelper();
             // create custom data for the fremarker template 'document.ftl'
             List<People> listPeople = Arrays.asList(
                     new People("Luthien", "Tinuviel", "Queen"), new People("Thorin", "Oakshield", "King"));
-
-            String chainId = "document";
-            // handler id
-            String handlerId = DocConfig.TYPE_MD;
             // output generation
             docHelper.getDocProcessConfig().fullProcess(chainId,
-                    DocProcessContext.newContext("listPeople", listPeople), handlerId, baos);
-            // print the output
-            log.info("{} output : \n{}", handlerId, new String(baos.toByteArray(), StandardCharsets.UTF_8));
-            Assertions.assertNotEquals(0, baos.size());
+                    DocProcessContext.newContext("listPeople", listPeople), handlerId, fos);
+            log.info("{} output : {}", handlerId, outputFile.getAbsoluteFile() );
+            Assertions.assertNotEquals(0, outputFile.length());
         }
     }
 
