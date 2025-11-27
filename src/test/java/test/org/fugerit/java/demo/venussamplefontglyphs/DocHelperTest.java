@@ -41,9 +41,9 @@ class DocHelperTest {
         String chainId = "document";
         // handler id
         String handlerId = DocConfig.TYPE_PDF;
-        File outputFile = new File( String.format( "target/%s.%s", chainId, handlerId ) );
-        log.info( "delete {} : {}", outputFile, outputFile.delete() );
-        try ( FileOutputStream fos = new FileOutputStream( outputFile ) ) {
+        File outputFile = new File(String.format("target/%s.%s", chainId, handlerId));
+        log.info("delete {} : {}", outputFile, outputFile.delete());
+        try (FileOutputStream fos = new FileOutputStream(outputFile)) {
             // creates the doc helper
             DocHelper docHelper = new DocHelper();
             // create custom data for the fremarker template 'document.ftl'
@@ -52,7 +52,7 @@ class DocHelperTest {
             // output generation
             docHelper.getDocProcessConfig().fullProcess(chainId,
                     DocProcessContext.newContext("listPeople", listPeople), handlerId, fos);
-            log.info("{} output : {}", handlerId, outputFile.getAbsoluteFile() );
+            log.info("{} output : {}", handlerId, outputFile.getAbsoluteFile());
             Assertions.assertNotEquals(0, outputFile.length());
         }
     }

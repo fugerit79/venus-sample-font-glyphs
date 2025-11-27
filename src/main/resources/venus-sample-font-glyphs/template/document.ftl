@@ -37,7 +37,7 @@
     </metadata>
     <body>
     <para>${docTitle!defaultTitle}</para>
-    <phrase>Sample glyph</phrase><phrase font-name="FreeSerif">□</phrase><phrase>with free serif font</phrase>
+    <phrase>Sample glyph</phrase><phrase font-name="NotoSans">□</phrase><phrase>with free serif font</phrase>
     <para>Sample with SVG image</para>
     <image type="svg" alt="Glyph with SVG"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="10px" viewBox="0 0 24 24"><path d="M21,2H3A1,1,0,0,0,2,3V21a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V3A1,1,0,0,0,21,2ZM20,20H4V4H20Z"/></svg>]]></image>
     <table columns="3" colwidths="30;30;40"  width="100" id="data-table" padding="2">

@@ -8,21 +8,21 @@ import org.fugerit.java.doc.freemarker.process.FreemarkerDocProcessConfigFacade;
  */
 public class DocHelper {
 
-     /*
-      * FreemarkerDocProcessConfig is thread-safe and should be initialized once for each config file.
-      * 
-      * Consider using a @ApplicationScoped or Singleton approach.
-      */
-     private final FreemarkerDocProcessConfig docProcessConfig = FreemarkerDocProcessConfigFacade
+    /*
+     * FreemarkerDocProcessConfig is thread-safe and should be initialized once for each config file.
+     *
+     * Consider using a @ApplicationScoped or Singleton approach.
+     */
+    private final FreemarkerDocProcessConfig docProcessConfig = FreemarkerDocProcessConfigFacade
             .loadConfigSafe("cl://venus-sample-font-glyphs/fm-doc-process-config.xml");
 
-     /**
-      * Accessor for FreemarkerDocProcessConfig configuration.
-      *
-      * @return the FreemarkerDocProcessConfig instance associated with this helper.
-      */
-     public FreemarkerDocProcessConfig getDocProcessConfig() {
-         return this.docProcessConfig;
-     }
+    /**
+     * Accessor for FreemarkerDocProcessConfig configuration.
+     *
+     * @return the FreemarkerDocProcessConfig instance associated with this helper.
+     */
+    public FreemarkerDocProcessConfig getDocProcessConfig() {
+        return this.docProcessConfig;
+    }
 
 }

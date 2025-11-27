@@ -21,6 +21,9 @@
                <font embed-url="classpath://font/TitilliumWeb-Regular.ttf" embedding-mode="full">
                    <font-triplet name="TitilliumWeb" style="normal" weight="normal"/>
                </font>
+               <font embed-url="classpath://font/NotoSans-Regular.ttf" embedding-mode="full">
+                   <font-triplet name="NotoSans" style="normal" weight="normal"/>
+               </font>
            </fonts>
 	   </renderer> 
 	</renderers>

@@ -1,0 +1,7 @@
+Licensed under the Apache License, Version 2.0
+
+Noto is a trademark of Google Inc. and may be registered in certain jurisdictions.
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+http://www.apache.org/licenses/LICENSE-2.0

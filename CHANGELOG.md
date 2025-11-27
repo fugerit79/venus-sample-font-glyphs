@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Sample with [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) font (smaller than free serif)
+
 ## [1.0.0] - 2025-11-22
 
 ### Added
